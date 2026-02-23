@@ -26,6 +26,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.kotlinfirstapp.components.MyBottomNavBar
+import com.example.kotlinfirstapp.components.PromoBanners
+import com.example.kotlinfirstapp.R
 
 @Preview(showBackground = true)
 @Composable
@@ -75,6 +77,15 @@ fun HomeScreen () {
                         tint = Color.White
                     )
             }
+
+            Spacer(modifier = Modifier.height(30.dp))
+            MySearchbar()
+            Spacer(modifier = Modifier.height(30.dp))
+            PromoBanners(
+                title = "Buy one get/one FREE",
+                badgeText = "Promo",
+                imageRes = R.drawable.ic_launcher_background
+            )
         }
     }
 
