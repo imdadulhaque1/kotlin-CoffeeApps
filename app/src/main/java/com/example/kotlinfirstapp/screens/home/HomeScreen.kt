@@ -86,6 +86,8 @@ fun HomeScreen () {
                 badgeText = "Promo",
                 imageRes = R.drawable.ic_launcher_background
             )
+            Spacer(modifier = Modifier.height(10.dp))
+            HomeCategories()
         }
     }
 
