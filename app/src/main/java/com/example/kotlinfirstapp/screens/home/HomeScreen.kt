@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.sp
 import com.example.kotlinfirstapp.components.MyBottomNavBar
 import com.example.kotlinfirstapp.components.PromoBanners
 import com.example.kotlinfirstapp.R
+import com.example.kotlinfirstapp.model.Product
 
 @Preview(showBackground = true)
 @Composable
@@ -88,6 +89,20 @@ fun HomeScreen () {
             )
             Spacer(modifier = Modifier.height(10.dp))
             HomeCategories()
+            Spacer(modifier = Modifier.height(20.dp))
+
+            // Displaying Products
+            val products = listOf(
+                Product(1, "Espresso","Strong & Rich", 3.80, R.drawable.ic_launcher_background),
+                Product(2, "Latte","Smooth and Creamy", 4.50, R.drawable.ic_launcher_background),
+                Product(3, "Cappuccino","Strong & Rich", 4.20, R.drawable.ic_launcher_background),
+                Product(4, "Mocha","With chocolate", 4.70, R.drawable.ic_launcher_background),
+                Product(5, "Macchiato","With cocoa flavor", 4.60, R.drawable.ic_launcher_background),
+                Product(6, "Flat White","Velvety smooth", 4.40, R.drawable.ic_launcher_background),
+                Product(7, "Iced Mocha","Refreshing and rich", 4.70, R.drawable.ic_launcher_background),
+            )
+
+            ProductGrid(products = products)
         }
     }
 
