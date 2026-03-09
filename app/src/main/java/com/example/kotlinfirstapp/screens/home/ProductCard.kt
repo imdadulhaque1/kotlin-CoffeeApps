@@ -1,5 +1,6 @@
 package com.example.kotlinfirstapp.screens.home
 
+import android.graphics.drawable.Icon
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -11,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -36,6 +38,7 @@ import com.example.kotlinfirstapp.R
 import com.example.kotlinfirstapp.model.Product
 import com.example.kotlinfirstapp.ui.theme.IvoryWhite
 import com.example.kotlinfirstapp.ui.theme.LightBrown
+import com.example.kotlinfirstapp.ui.theme.LightGray
 
 
 @Composable
@@ -47,8 +50,8 @@ fun ProductCard(
     Card(
         modifier = modifier.fillMaxWidth().padding(8.dp),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors( containerColor = Color.White ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+        colors = CardDefaults.cardColors( containerColor = Color.LightGray.copy(0.4f) ),
+//        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
     ) {
         Column(
             modifier = Modifier.padding(8.dp)
@@ -62,6 +65,16 @@ fun ProductCard(
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.fillMaxSize().clip(shape = RoundedCornerShape(24.dp))
                 )
+                Box(
+                    modifier = Modifier.align(Alignment.TopEnd)
+//                        .background(color = LightGray.copy(0.5f))
+                ) {
+                    Icon(
+                        painter = painterResource(R.drawable.ic_heart_icon),
+                        contentDescription = "Add to Favourite",
+//                        modifier= Modifier.background(Color.White)
+                        )
+                }
             }
             Spacer(modifier = Modifier.height(5.dp))
             Text(

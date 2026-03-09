@@ -24,10 +24,10 @@ fun MyBottomNavBar() {
 
 //    Bottom navbar items
     val navItems=listOf(
-        NavItem("Home", R.drawable.ic_launcher_foreground),
-        NavItem("Cart", R.drawable.ic_launcher_foreground),
-        NavItem("Favourites", R.drawable.ic_launcher_foreground),
-        NavItem("Profile", R.drawable.ic_launcher_foreground),
+        NavItem("Home", R.drawable.ic_home_icon),
+        NavItem("Cart", R.drawable.ic_cart_icon),
+        NavItem("Favourites", R.drawable.ic_heart_icon),
+        NavItem("Profile", R.drawable.ic_user_icon),
     )
 
     NavigationBar(
